@@ -46,7 +46,7 @@ void adjustHeap(int arr[], int len)
     return;
 }
 
-/***** 排序阶段 *****/
+/***** 取最大值放至数组尾部 *****/
 //heap排序后，顶点元素是最大的，将顶点元素与最后一个元素交换后，调整除了
 //最后一个元素之外的树结构
 void swapMax(int A[], int end)
@@ -59,7 +59,7 @@ void swapMax(int A[], int end)
 void heapSort(int A[], int len)
 {
     adjustHeap(A, len);
-    for (int i = len -1 ; i >= 1; i--)
+    for (int i = len -1 ; i >= 1; i--) //依次取出最大值
         swapMax(A, i);
 }
 
